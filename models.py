@@ -11,7 +11,7 @@ def connectdb(app):
     db.init_app(app)
 
 class User(db.Model):
-    """Pet table creation"""
+    """User table creation"""
     __tablename__ ='users'
 
     id= db.Column(db.Integer, primary_key = True, autoincrement =True)    
