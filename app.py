@@ -51,7 +51,7 @@ def show_user(user_id):
 
 @app.route('/users/<int:user_id>/edit', methods=['POST'])
 def manage_user(user_id):
-    user = User.query.get_or_404(user_id)
+    user = User.query.get(user_id)
     if request.form['submit_button'] == 'edit':
         return render_template("edit.html", user=user)
     else:
